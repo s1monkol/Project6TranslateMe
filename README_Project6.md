@@ -2,43 +2,59 @@
 
 Submitted by: **Semen Kolesnykov**
 
-**TranslateMe** is an app that allows users to translate phrases from English to Italian using the MyMemory Translation API. It also stores translation history and allows clearing it.
+**TranslateMe** is an iOS app that allows users to translate text from English to Italian using the MyMemory Translation API. The app includes basic error handling and maintains a translation history for the user.
 
-Time spent: **5** hours spent in total
+Time spent: **7 hours** in total
 
-## Required Features
+---
+
+## ✅ Required Features
 
 The following **required** functionality is completed:
 
-- [x] Users open the app to a TranslateMe home page with a place to enter a word, phrase or sentence, a button to translate, and another field that should initially be empty  
-- [x] When users tap translate, the word written in the upper field translates in the lower field.  
-- [x] A history of translations can be stored (in a scroll view in the same screen)  
-- [x] The history of translations can be erased
+- [x] App launches to a TranslateMe home screen with:
+  - [x] A text input field for users to enter a word, phrase, or sentence.
+  - [x] A "Translate" button.
+  - [x] A second field to display the translated result.
+- [x] When users tap "Translate", the app calls the translation API and shows the translated text in the lower field.
+- [x] The app maintains a scrollable history of past translations.
+- [x] Users can erase the translation history using a clear/reset button.
 
-## Optional Features
+---
+
+## ✨ Optional Features
 
 The following **optional** features are implemented:
 
-- [ ] Add a variety of choices for the languages  
-- [ ] Add UI flair  
+- [x] Error message is shown if the API call fails (e.g., network issue or server error).
 
-## Additional Features
+---
 
-The following **additional** features are implemented:
+## 💡 Additional Features
 
-- [x] Error handling for failed API calls (e.g. shows "Translation failed" if API doesn't respond)
+- [x] Used URLSession to fetch API data with proper encoding/decoding.
+- [x] Handled edge cases where API fails or input is empty.
 
-## Video Walkthrough
+---
 
-Here's a walkthrough of implemented user stories:
+## 🎥 App Walkthrough
 
-> [Embed Loom video here]
+> **Note:** Due to technical limitations in the FIU library (outdated iMacs, no ability to install screen recording software, and 95% simulator failure rates), I was unable to record a traditional walkthrough video.  
+>  
+> Instead, I have uploaded a GIF demo of the core features to demonstrate the app’s functionality.
 
-## Notes
+![Walkthrough](translateMe.gif)
 
-One issue I encountered was that the translation API sometimes fails to respond, so I had to add error handling logic. Additionally, I explored Firebase integration but focused the final version on making the API translation + history stable.
+---
 
-## License
+## 📝 Notes
+
+- The biggest challenge was working with the API response format and ensuring fallback behavior on failure.
+- I originally planned to add multi-language support and Firebase integration, but prioritized stability of the base features due to limited hardware access and development time.
+
+---
+
+## 📜 License
 
     Copyright 2025 Semen Kolesnykov
 
